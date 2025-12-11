@@ -33,7 +33,7 @@ inputs = {
   iam_username = "testuser1"  
 
   # Rotation control
-  key1_enabled = false
+  key1_enabled = true
   key2_enabled = true
 
   common_tags = {

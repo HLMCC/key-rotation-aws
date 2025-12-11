@@ -1,7 +1,6 @@
 # AWS IAM Access Key Rotation with Terragrunt
 
- Terragrunt solution for rotating AWS IAM access keys with zero downtime using a dual-key approach. **Author:** Pratik Lamsal
-
+ Terragrunt solution for rotating AWS IAM access keys with zero downtime using a dual-key approach. 
 ## Table of Contents
 
 - [Overview](#overview)
@@ -397,6 +396,8 @@ terragrunt force-unlock LOCK_ID
 ```
 ##  Contributing
 Feel free to contribute
+**Author:** Pratik Lamsal
+
 
 
 

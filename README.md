@@ -100,32 +100,14 @@ export AWS_PROFILE=your-profile-name
 aws configure
 ```
 
-### Step 2: Configure Remote State (Optional but Recommended)
+### Step 2: Configure Remote State 
 
 Choose one of the following options:
 
 #### Option A: Use Remote State (Recommended for Teams)
 
-1. Create S3 bucket and DynamoDB table:
-   ```bash
-   # Create S3 bucket
-   aws s3 mb s3://my-terraform-state-bucket --region us-east-1
 
-   # Enable versioning
-   aws s3api put-bucket-versioning \
-     --bucket my-terraform-state-bucket \
-     --versioning-configuration Status=Enabled
-
-   # Create DynamoDB table
-   aws dynamodb create-table \
-     --table-name terraform-state-lock \
-     --attribute-definitions AttributeName=LockID,AttributeType=S \
-     --key-schema AttributeName=LockID,KeyType=HASH \
-     --billing-mode PAY_PER_REQUEST \
-     --region us-east-1
-   ```
-
-2. Set environment variables:
+1. Set environment variables:
    ```bash
    export TF_STATE_BUCKET="my-terraform-state-bucket"
    export TF_STATE_LOCK_TABLE="terraform-state-lock"
@@ -395,7 +377,8 @@ terragrunt destroy
 terragrunt force-unlock LOCK_ID
 ```
 ##  Contributing
-Feel free to contribute
+
+
 **Author:** Pratik Lamsal
 
 
